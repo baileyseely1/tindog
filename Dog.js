@@ -15,12 +15,13 @@ class Dog {
         const {name, avatar, age, bio} = this
         return `
             <img src="${avatar}" class="dog">
-            <div class="action hidden" id="hidden">
-                <img src="/images/badge-like.png">
+            <div class="action">
+                <img src="/images/badge-like.png" class="hidden" id="like">
+                <img src="/images/badge-nope.png" class="hidden" id="nope">
             </div>
             <div class="text">
                 <h1>${name}, ${age}</h1>
-                <p>How you doin?</p>
+                <p>${bio}</p>
             </div>
                 `
     }

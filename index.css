@@ -39,11 +39,11 @@ li img {
     height: 70vh
 }
 
-main.container {
+section.container {
     position: relative;
 }
 
-main.container .text {
+section.container .text {
     position: absolute;
     left: 20;
     bottom: 5;
@@ -63,7 +63,7 @@ main.container .text {
     width: 175px;
 }
 
-.end {
+.end, h2 {
     text-align: center;
 }
 
@@ -85,8 +85,12 @@ p {
     color: #B7B7B7;
 }
 
-main img {
+section img {
     border-radius: 15px;
+}
+
+.top {
+    margin-top: 2em;
 }
 
 footer {
