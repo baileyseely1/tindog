@@ -1,22 +1,12 @@
 import data from '/data.js'
 import Dog from '/Dog.js'
 
-const matches = []
-let currentDogIndex = 0
-let currentDog = new Dog(data[currentDogIndex])
-
 document.getElementById('liked').addEventListener('click', yes)
 document.getElementById('swiped').addEventListener('click', no)
 
-render()
-
-
-function render() {
-    document.getElementById('container').innerHTML = currentDog.getDogHtml()
-    if (currentDogIndex >= data.length) {
-        end()
-    }
-}
+const matches = []
+let currentDogIndex = 0
+let currentDog = new Dog(data[currentDogIndex])
 
 function getNewDog() {
     currentDogIndex++
@@ -65,3 +55,12 @@ function end() {
         ` 
         + matchHtml
 }
+
+function render() {
+    document.getElementById('container').innerHTML = currentDog.getDogHtml()
+    if (currentDogIndex >= data.length) {
+        end()
+    }
+}
+
+render()
