@@ -36,24 +36,22 @@ function no() {
 }
 
 function end() {
-    const matchHtml = matches.map(match => {
-        return `
-        <section class="container top" id="container">
-        <img src="${match.avatar}" class="dog">
-        <div class="text">
-            <h1>${match.name}, ${match.age}</h1>
-            <p>${match.bio}</p>
-        </div>
-        </section>`
-    }).join('')
-
         document.body.innerHTML = ` 
         <div class="container">
         <h1 class="end">No dogs left in your area :(</h!>
         <h2>Here are your matches:</h2>
         </div>
         ` 
-        + matchHtml
+        + matches.map(match => {
+            return `
+            <section class="container top" id="container">
+            <img src="${match.avatar}" class="dog">
+            <div class="text">
+                <h1>${match.name}, ${match.age}</h1>
+                <p>${match.bio}</p>
+            </div>
+            </section>`
+        }).join('')
 }
 
 function render() {
