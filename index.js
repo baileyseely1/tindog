@@ -26,7 +26,7 @@ function yes() {
 }
 
 function no() {
-    if (!currentDog.hasBeenLiked) {
+    if (!currentDog.hasBeenLiked && !currentDog.hasBeenSwiped) {
         currentDog.setMatchStatus(false)
         document.getElementById('nope').classList.remove('hidden')
         setTimeout(() => {
